@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Register Page
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+<!--<div style="background-image:url('{% static "images/formbck.jpg" %}');background-size:cover;height:500px;background-size:100%100%;background-attachment:fixed;">-->
+<!--<h1 class="text-center">Login</h1>-->
+<!--<form method="POST" class="w-25 mx-auto">-->
+<!--    {% csrf_token %}-->
+<!--  <div class="mb-3">-->
+<!--    <label class="form-label">Username</label>-->
+<!--    <input type="text" class="form-control" name="u">-->
+<!--  <div class="mb-3">-->
+<!--    <label class="form-label">Password</label>-->
+<!--    <input type="password" class="form-control" name="p">-->
+<!--  </div>-->
+<!--      <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--</form>-->
+<!--</div>-->
+<div class="container mt-1 mt-4" onclick="onclick">
+    <div class="row">
+        <div class="col-md-12">
+  <div class="top"></div>
+  <div class="bottom"></div>
+  <div class="center">
+      <form method="POST">
+          {% csrf_token %}
+    <h2 class="text-center">Please Sign In</h2>
+    <input type="text" placeholder="Username" name="u"/>
+    <input type="password" placeholder="password" name="p"/>
+    <input type="submit"/>
+          </form>
+  </div>
+        </div>
+        </div>
+</div>
+
+
+
+{% endblock %}

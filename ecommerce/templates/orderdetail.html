@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content%}
+<br>
+<br>
+<br>
+<div class="container-fluid mt-5">
+    <h1 class="text-center"><i class="fa-regular fa-circle-check"></i></h1>
+<h3 class="text-center fw-bold">{{message}}</h3>
+<h6 class="text-center">Thank you for choosing us</h6>
+    <h5 class="text-center"><a href="{%url 'shop:category1' %}" class="btn btn-secondary">Continue Shopping</a></h5>
+    </div>
+{% endblock %}

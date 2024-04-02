@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Search Page
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+<p class="text-center">You have searched for <span class="text-info">{{q}}</span></p>
+<section class="container-fluid" style="margin-bottom:100px;">
+    <div class="row">
+        {% for i in p %}
+        <div class="col-md-3">
+
+
+        <div class="card mt-3" style="width: 18rem;">
+            <img src="{{ i.image.url }}" class="card-img-top p-3" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{i.name}}</h5>
+                 <p class="card-text"></p>
+                 <p>Price : ₹{{i.price}}</p>
+                <a href="{% url 'shop:details' i.id%}" class="btn btn-primary">Show details</a>
+
+            </div>
+        </div>
+{% empty %}
+            <h5 class="text-danger text-center">No results found</h5>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+{% endblock %}

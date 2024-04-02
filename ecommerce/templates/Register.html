@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Register Page
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+<div style="background-image:url('{% static "images/formbck.jpg" %}');background-size:cover;background-size:100%100%;background-attachment:fixed;">
+<h1 class="text-center">Please Sign Up</h1>
+<hr class="w-25 mx-auto border border-2 border-dark">
+<div class="mx-auto">
+<form method="POST" enctype="multipart/form-data" class="w-25 mb-5 mx-auto">
+    {% csrf_token %}
+  <div class="mb-3">
+    <label class="form-label">Username</label>
+    <input type="text" class="form-control" name="u">
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" name="p">
+  </div>
+   <div class="mb-3">
+    <label  class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" name="c">
+  </div>
+     <div class="mb-3">
+    <label  class="form-label">E-mail</label>
+    <input type="email" class="form-control" name="e">
+  </div>
+   <div class="mb-3">
+    <label  class="form-label">First Name</label>
+    <input type="text" class="form-control" name="f">
+  </div>
+   <div class="mb-3">
+    <label  class="form-label">Last Name</label>
+    <input type="text" class="form-control" name="l">
+  </div>
+  <button class="button-29" role="button">Register Now</button>
+</form>
+    </div>
+
+<br>
+    </div>
+
+
+{% endblock %}
